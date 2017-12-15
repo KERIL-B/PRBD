@@ -8,9 +8,11 @@
                 <SolidColorBrush Color="White"/>
             </StackPanel.Background>
             <Label Content="Tabels" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="TablesCB" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="90" SelectionChanged="TablesCB_SelectionChanged"/>            
+            <RadioButton Name="ClientRB" Content="Clients" Checked="RadioButton_Checked_1"/>
+            <RadioButton Name="CompanyRB" Content="Companies" Checked="RadioButton_Checked_2"/>
+            <Button Content="Compare" Margin="5,10,5,0" Click="Button_Click_1" />
         </StackPanel>
-        <DataGrid Name="tableDGV1" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Height="160" Width="512"/>
+        <DataGrid Name="tableDGV1" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Height="160" Width="512" MouseDoubleClick="tableDGV1_MouseDoubleClick"/>
         <DataGrid Name="tableDGV2" HorizontalAlignment="Left" Margin="115,180,0,0" VerticalAlignment="Top" Height="160" Width="512"/>
 
     </Grid>

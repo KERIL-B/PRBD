@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Labor_exchange_postgres.Entities
 {
-    class Client : Object
+    class Proficiency
     {
-        public int id { get; private set; }
-        public string name { get; private set; }
-        public int age { get; private set; }
+        public int id {  get; private set; }
+        public string name {  get; private set; }
 
-        public Client(int id, string name, int age)
+        public Proficiency(int id, string name)
         {
             this.id = id;
             this.name = name;
-            this.age = age;
         }
     }
 }

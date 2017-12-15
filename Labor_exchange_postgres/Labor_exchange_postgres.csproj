@@ -59,8 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\Proficiency.cs" />
     <Compile Include="Services\BDReading.cs" />
-    <Compile Include="Services\ShowInfo.cs" />
+    <Compile Include="Services\GetTables.cs" />
+    <Compile Include="Services\WorkingWithTables.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,7 +73,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entities\Application.cs" />
-    <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\Vacancy.cs" />
     <Compile Include="MainWindow.xaml.cs">

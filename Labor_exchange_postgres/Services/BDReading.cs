@@ -8,11 +8,11 @@ using Npgsql;
 
 namespace Labor_exchange_postgres.Services
 {
-    class BDReading
+    static class BDReading
     {
         private const string connectionString = "Server=127.0.0.1;Port=5432;User Id=postgres;Password=postgre;Database=Labor_Exchange;";
 
-        public List<Client> GetClients()
+        static public List<Client> GetClients()
         {
             List<Client> list = new List<Client>();
 
@@ -39,7 +39,7 @@ namespace Labor_exchange_postgres.Services
             return list;
         }
 
-        public List<Company> GetCompanies()
+        static public List<Company> GetCompanies()
         {
             List<Company> list = new List<Company>();
 
@@ -66,7 +66,7 @@ namespace Labor_exchange_postgres.Services
             return list;
         }
 
-        public List<Vacancy> GetVacancies()
+        static public List<Vacancy> GetVacancies()
         {
             List<Vacancy> list = new List<Vacancy>();
 
@@ -86,7 +86,7 @@ namespace Labor_exchange_postgres.Services
             {
                 try
                 {
-                    Vacancy vacancy = new Vacancy(reader.GetInt32(0), reader.GetString(3), reader.GetString(5), reader.GetString(7));
+                    Vacancy vacancy = new Vacancy(reader.GetInt32(0), reader.GetString(3), reader.GetInt32(4),reader.GetString(5), reader.GetString(7));
                     list.Add(vacancy);
                 }
                 catch { }
@@ -97,7 +97,7 @@ namespace Labor_exchange_postgres.Services
             return list;
         }
 
-        public List<dbApplication> GetApplications()
+        static public List<dbApplication> GetApplications()
         {
             List<dbApplication> list = new List<dbApplication>();
 
@@ -128,5 +128,31 @@ namespace Labor_exchange_postgres.Services
             return list;
         }
 
+        static public List<Proficiency> GetProficiencies()
+        {
+            List<Proficiency> list = new List<Proficiency>();
+
+            string sqlQuery = "SELECT * FROM public.\"Proficiency\"";
+
+            NpgsqlConnection conn = new NpgsqlConnection(connectionString);
+            NpgsqlCommand comm = new NpgsqlCommand(sqlQuery, conn);
+            conn.Open();
+
+            NpgsqlDataReader reader;
+            reader = comm.ExecuteReader();
+            while (reader.Read())
+            {
+                try
+                {
+                    Proficiency proficiency = new Proficiency(reader.GetInt32(0), reader.GetString(1));
+                    list.Add(proficiency);
+                }
+                catch { }
+
+            }
+            conn.Close();
+
+            return list;
+        }
     }
 }
