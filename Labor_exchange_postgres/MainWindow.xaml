@@ -1,9 +1,9 @@
 ﻿<Window x:Class="Labor_exchange_postgres.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Labor_exchange" Height="384.444" Width="645">
+        Title="Labor_exchange" Height="701" Width="645" Activated="Window_Activated_1">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="353" VerticalAlignment="Top" Width="110">
+        <StackPanel HorizontalAlignment="Left" Height="670" VerticalAlignment="Top" Width="110">
             <StackPanel.Background>
                 <SolidColorBrush Color="White"/>
             </StackPanel.Background>
@@ -12,8 +12,13 @@
             <RadioButton Name="CompanyRB" Content="Companies" Checked="RadioButton_Checked_2"/>
             <Button Content="Compare" Margin="5,10,5,0" Click="Button_Click_1" />
         </StackPanel>
-        <DataGrid Name="tableDGV1" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Height="160" Width="512" MouseDoubleClick="tableDGV1_MouseDoubleClick"/>
-        <DataGrid Name="tableDGV2" HorizontalAlignment="Left" Margin="115,180,0,0" VerticalAlignment="Top" Height="160" Width="512"/>
+        <DataGrid Name="tableDGV1" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Height="320" Width="512" MouseDoubleClick="tableDGV1_MouseDoubleClick" CanUserResizeRows="False" MouseRightButtonDown="tableDGV1_MouseRightButtonDown"/>
+        <DataGrid Name="tableDGV2" HorizontalAlignment="Left" Margin="115,340,0,0" VerticalAlignment="Top" Height="320" Width="512" CanUserResizeRows="False"/>
+        
+        <Menu x:Name="menu" Visibility="Hidden" HorizontalAlignment="Left" Height="40" Margin="537,0,0,0" VerticalAlignment="Top" Width="100">
+            <MenuItem x:Name="Item1" Click="MenuItem_Click_1" />
+            <MenuItem x:Name="Item2" Click="Item2_Click" />
+        </Menu>
 
     </Grid>
 </Window>

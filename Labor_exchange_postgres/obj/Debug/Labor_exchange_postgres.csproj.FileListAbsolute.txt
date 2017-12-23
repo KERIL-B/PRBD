@@ -21,3 +21,11 @@ E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\De
 E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\Labor_exchange_postgres.csproj.GenerateResource.Cache
 E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\Labor_exchange_postgres.exe
 E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\Labor_exchange_postgres.pdb
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addWindow.baml
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addWindow.g.cs
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addCompany.baml
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addCompany.g.cs
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addApplication.baml
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addApplication.g.cs
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addVacancy.baml
+E:\vs2012\1progs\ПРБД\Labor_exchange_postgres\Labor_exchange_postgres\obj\Debug\windows\addVacancy.g.cs

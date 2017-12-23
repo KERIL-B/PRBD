@@ -59,11 +59,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="windows\addApplication.xaml.cs">
+      <DependentUpon>addApplication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\addCompany.xaml.cs">
+      <DependentUpon>addCompany.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\addVacancy.xaml.cs">
+      <DependentUpon>addVacancy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\addWindow.xaml.cs">
+      <DependentUpon>addWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\Proficiency.cs" />
+    <Compile Include="Services\BDAdding.cs" />
     <Compile Include="Services\BDReading.cs" />
     <Compile Include="Services\GetTables.cs" />
     <Compile Include="Services\WorkingWithTables.cs" />
+    <Page Include="windows\addApplication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\addCompany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\addVacancy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\addWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

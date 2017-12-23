@@ -8,11 +8,11 @@ using Npgsql;
 
 namespace Labor_exchange_postgres.Services
 {
-    static class BDReading
+     static class BDReading
     {
         private const string connectionString = "Server=127.0.0.1;Port=5432;User Id=postgres;Password=postgre;Database=Labor_Exchange;";
 
-        static public List<Client> GetClients()
+        public static List<Client> GetClients()
         {
             List<Client> list = new List<Client>();
 

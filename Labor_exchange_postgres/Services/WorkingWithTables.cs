@@ -8,7 +8,7 @@ using Labor_exchange_postgres.Entities;
 namespace Labor_exchange_postgres.Services
 {
     
-    class WorkingWithTables
+     class WorkingWithTables
     {
         public List<dbApplication> GetAppsByClientId(int id)
         {
@@ -32,17 +32,29 @@ namespace Labor_exchange_postgres.Services
             return list;
         }
 
-        public List<int> GetIndexesOfVacanciesByApplications(string prof)
+        public bool AddClient(string name, int age)
         {
-            List<int> indexes = new List<int>();
-            int i=0;
-            foreach(Vacancy vacancy in Tables.vacancies())
-            {
-                if (vacancy.proficiency == prof)
-                    indexes.Add(i);
-                ++i;
-            }
-            return indexes;
+            Client newclient = new Client(Tables.MaxClientId()+1,name,age);
+            return BDAdding.AddClient(newclient); 
         }
+
+        public bool AddCompany(string name)
+        {
+            Company company = new Company(Tables.MaxCompanyId()+1, name);
+            return BDAdding.AddCompany(company);
+        }
+
+        public bool AddApplication(string comment, int client_id, string client, string prof)
+        {
+            dbApplication app = new dbApplication(Tables.MaxApplicationId() + 1, comment,client_id,client,prof);
+            return BDAdding.AddApplication(app);
+        }
+
+        public bool AddVacancy(string comment, int company_id, string company, string prof)
+        {
+            Vacancy vacancy=new Vacancy(Tables.MaxVacancyId()+1,comment,company_id,company,prof);
+            return BDAdding.AddVacancy(vacancy);
+        }
+      
     }
 }

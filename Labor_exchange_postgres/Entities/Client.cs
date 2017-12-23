@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labor_exchange_postgres.Entities
 {
-    class Client : Object
+     class Client : Object
     {
         public int id { get; private set; }
         public string name { get; private set; }
